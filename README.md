@@ -1,2 +1,7 @@
 # street-rate-fl
-Street Rate FL: Florida self-storage directory comparing advertised promo rates with published after-promo prices
+
+Static site for GitHub Pages.
+
+Live: https://jip223.github.io/street-rate-fl/
+
+Source is plain HTML/CSS. Pages is served from the `main` branch root.
