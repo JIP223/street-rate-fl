@@ -186,6 +186,26 @@ td.num, th.num { text-align: right; white-space: nowrap; }
 
 /* ---------- home ---------- */
 .hero { padding-block: 1.5rem 1rem; }
+.hero + .county-heading { margin-top: .6rem; }
+.county-heading { margin-bottom: .7rem; }
+.county-list {
+  list-style: none; padding: 0; margin: 0 0 1.25rem;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: var(--surface); box-shadow: var(--shadow); overflow: hidden;
+}
+.county-list li + li { border-top: 1px solid var(--line); }
+.county-list a {
+  display: flex; justify-content: space-between; align-items: baseline; gap: .8rem 1.2rem;
+  text-decoration: none; color: inherit; padding: .65rem 1rem;
+}
+.county-list a:hover { background: var(--surface-2); }
+.county-list .name { font-weight: 620; color: var(--link); flex: 0 0 auto; }
+.county-list .blurb { font-size: .88rem; color: var(--ink-3); text-align: right; }
+.city-pages { margin: 0 0 .25rem; color: var(--ink-2); }
+@media (max-width: 700px) {
+  .county-list a { flex-direction: column; gap: .12rem; padding: .55rem 1rem; }
+  .county-list .blurb { text-align: left; }
+}
 .hero h1 { max-width: 20ch; }
 .hero h1 .promo { color: var(--promo); }
 .hero h1 .later { color: var(--later); }
@@ -211,6 +231,8 @@ td.num, th.num { text-align: right; white-space: nowrap; }
   body { font-size: 16px; }
   .site-nav a { padding: .3rem .55rem; font-size: .85rem; }
   .rate.later { font-size: 1.7rem; }
+  .hero { padding-block: 1rem .6rem; }
+  main { padding-block: 1.2rem 4rem; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
 @media print { .site-head, .partner, .site-foot .cols { display: none; } }

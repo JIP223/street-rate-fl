@@ -30,3 +30,5 @@ Use these substitutions in reader-facing copy:
 - reserve / commission → book / fee
 
 Keep numbers, addresses, dates, source links, meta tags, canonicals, and `data-checked` pills unchanged when you edit wording.
+
+The top nav on every page is Home, Counties (`counties.html`), How we check, and Contact. Do not put a city or county name in the header nav. Only `counties.html` should mark Counties as the current page. Tampa and each county stay linked from the home page and from `counties.html`.
