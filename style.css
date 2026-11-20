@@ -236,3 +236,48 @@ td.num, th.num { text-align: right; white-space: nowrap; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
 @media print { .site-head, .partner, .site-foot .cols { display: none; } }
+
+/* Counties page: county tile map, ad-vs-later bars, county listings */
+.map-grid { display: grid; grid-template-columns: minmax(0, 1fr) 16rem; gap: 1.5rem; align-items: start; margin: 1.5rem 0 2rem; }
+@media (max-width: 760px) { .map-grid { grid-template-columns: 1fr; } }
+.fl { width: 100%; height: auto; display: block; }
+.fl .sea { font-family: Georgia, serif; font-style: italic; font-size: 22px; fill: var(--ink-3); opacity: .6; }
+.fl .sea.sm { font-size: 15px; }
+.fl .lake { fill: var(--promo-soft); }
+.fl .lake-l { font-size: 9px; fill: var(--ink-3); text-anchor: middle; }
+.ct rect { fill: var(--ink); fill-opacity: .07; stroke: var(--bg); stroke-width: 2; }
+.ct text { text-anchor: middle; font-family: var(--nums); fill: var(--ink-3); }
+.ct .ab { font-size: 13px; font-weight: 700; letter-spacing: .04em; }
+.ct .pr { font-size: 11px; font-weight: 700; }
+.t0 rect { fill: var(--surface); fill-opacity: 1; stroke: var(--ink); stroke-dasharray: 4 3; stroke-width: 1.5; }
+.t2 rect { fill: var(--promo); fill-opacity: .28; }
+.t3 rect { fill: var(--promo); fill-opacity: .62; }
+.t4 rect { fill: var(--promo); fill-opacity: 1; }
+.t0 text, .t2 text { fill: var(--ink); }
+.t3 text, .t4 text { fill: var(--bg); }
+a.ct:hover rect, a.ct:focus rect { stroke: var(--later); stroke-width: 4; stroke-dasharray: none; }
+.key { display: flex; gap: .6rem; align-items: center; font-size: .9rem; margin: .45rem 0; }
+.sw { width: 22px; height: 22px; border-radius: 5px; flex: none; background: var(--promo); }
+.sw.k3 { opacity: .62; } .sw.k2 { opacity: .28; }
+.sw.k0 { background: var(--surface); border: 1.5px dashed var(--ink); }
+.sw.koff { background: var(--line); }
+.jump { margin-top: .9rem; }
+.jump a { display: inline-block; margin: 0 .35rem .4rem 0; padding: .2rem .65rem; border: 1px solid var(--line); border-radius: 999px; font-size: .88rem; text-decoration: none; color: var(--link); background: var(--surface); }
+.jump a:hover { border-color: var(--link); }
+.catch { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.4rem 1.4rem 1rem; margin: 0 0 2rem; }
+.catch h2 { margin-top: 0; }
+.bar { display: grid; grid-template-columns: 13rem 1fr; gap: .6rem; align-items: center; margin: .6rem 0; font-size: .9rem; }
+@media (max-width: 560px) { .bar { grid-template-columns: 1fr; } }
+.track { position: relative; height: 26px; background: var(--line); border-radius: 6px; }
+.track .ad { position: absolute; left: 0; top: 0; bottom: 0; background: var(--promo); border-radius: 6px 0 0 6px; }
+.track .later { position: absolute; top: 0; bottom: 0; background: var(--later); border-radius: 0 6px 6px 0; }
+.track span { position: absolute; top: 4px; font-family: var(--nums); font-weight: 700; font-size: .82rem; white-space: nowrap; }
+.co { border-top: 1px solid var(--line); padding: 1.1rem 0 1.3rem; scroll-margin-top: 70px; }
+.co:target { background: var(--surface); box-shadow: inset 4px 0 0 var(--later); padding-inline: 1rem; border-radius: var(--radius-sm); }
+.co h3 { margin: 0; font-size: 1.3rem; }
+.co .meta { font-size: .85rem; color: var(--ink-3); margin: .15rem 0 .6rem; }
+.ls { list-style: none; margin: 0; padding: 0; }
+.ls li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: .2rem .9rem; padding: .6rem 0; border-bottom: 1px solid var(--line); }
+.ls b { font-family: var(--nums); font-size: 1.05rem; white-space: nowrap; text-align: right; }
+.ls small { grid-column: 1 / -1; color: var(--ink-3); font-size: .83rem; }
+.co .more { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: .7rem; font-size: .9rem; }
