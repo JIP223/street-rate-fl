@@ -12,7 +12,9 @@ Every city/size page copies `tampa-10x10.html`. Its sections are marked in the H
 8. Partner block, one per page, after the advice, always labelled. Disabled until an account exists.
 9. Sources and corrections, always last, linking to `contact.html`.
 
-Rules: no number that isn't on the company's own page that day; every page dated; no tracking scripts; one stylesheet (`style.css`); relative links only (no `<base>`), so the site works on github.io and on streetratefl.com.
+Rules: no number that isn't on the company's own page that day; every page dated; keep the Google Analytics snippet already in the `<head>` of `tampa-10x10.html` (measurement ID `G-L0DSH6DGEX`) and do not add any other tracking scripts; one stylesheet (`style.css`); relative links only (no `<base>`), so the site works on github.io and on streetratefl.com.
+
+Every page includes the standard Google Analytics (gtag.js) snippet in `<head>`, right after the opening meta tags, with measurement ID `G-L0DSH6DGEX`. Copy that snippet from `tampa-10x10.html` when you start a new county page. Do not remove it, and do not add other tracking scripts.
 
 ## Plain English
 
