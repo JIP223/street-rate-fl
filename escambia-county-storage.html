@@ -61,7 +61,7 @@
     <p class="eyebrow">Escambia County · 10×10 storage</p>
     <!-- TEMPLATE 2 · question and answer -->
     <h1>What does 10×10 storage cost in Escambia County?</h1>
-    <p class="lede">Public Storage shows seven priced 10×10 units in Escambia County, all in Pensacola. Four run a four-month offer, two take half off the first month, and 9311 Pine Forest Rd lists $1 for the first month. Online rent runs from $51 a month to $104. Every amount below was shown on the company's own page on November 21, 2026.</p>
+    <p class="lede">Public Storage shows seven priced 10×10 units in Escambia County, all in Pensacola. Four run a four-month offer, two take half off the first month, and 9311 Pine Forest Rd lists $1 for the first month. After the offers end, monthly rent runs from $75 at 9311 Pine Forest Rd to $119 at 4300 Bauer Rd. Every amount below was shown on the company's own page on November 21, 2026.</p>
     <!-- TEMPLATE 3 · check date and coverage -->
     <div class="fresh"><span class="pill" data-checked="2026-11-21">Checked November 21, 2026</span><span>1 companies · 7 priced listings</span><a href="about.html">How we check prices</a></div>
     <!-- TEMPLATE 4 · at a glance -->
@@ -139,7 +139,7 @@
       </tbody></table></div>
       <!-- TEMPLATE 7 · local checks -->
       <h2>Before you sign</h2>
-      <ul class="checks"><li>Ask what the rent is after the offer. Four locations sell the first four months below the later rent: 944 Creighton Road (40% off), 7001 Plantation Rd (30% off), 1835 E Olive Rd and 4300 Bauer Rd (both half price).</li><li>399 Brent Lane and 6551 Mobile Hwy take half off the first month only, then charge the full online rent.</li><li>Ask for the total due at move-in, including the $29 admin fee, a lock, coverage and tax.</li><li>399 Brent Lane has the highest online rent in this sample at $104; 9311 Pine Forest Rd has the lowest first-year total at $855.</li><li>Confirm the unit type before you book. 7001 Plantation Rd and 9311 Pine Forest Rd are the climate-controlled units in this sample.</li></ul>
+      <ul class="checks"><li>Ask what the rent is after the offer. Four locations sell the first four months below the later rent: 944 Creighton Road (40% off), 7001 Plantation Rd (30% off), 1835 E Olive Rd and 4300 Bauer Rd (both half price).</li><li>399 Brent Lane and 6551 Mobile Hwy take half off the first month only, then charge the full online rent.</li><li>Ask for the total due at move-in, including the $29 admin fee, a lock, coverage and tax.</li><li>4300 Bauer Rd has the highest monthly rent in this sample, $119 from month five; 9311 Pine Forest Rd has the lowest first-year total at $855.</li><li>Confirm the unit type before you book. 7001 Plantation Rd and 9311 Pine Forest Rd are the climate-controlled units in this sample.</li></ul>
       <!-- TEMPLATE 8 · partner block: one per page, after the advice, always labelled -->
       <h2>Compare and reserve</h2>
       <div class="partner">
@@ -185,7 +185,7 @@
 <script>
 /* Freshness: turns the check date into "Checked N days ago" and flags pages over 45 days old. Runs only in your browser. */
 document.querySelectorAll("[data-checked]").forEach(function (el) {
-  var d = Math.floor((Date.now() - Date.parse(el.dataset.checked + "T12:00:00-05:00")) / 864e5);
+  var t=new Intl.DateTimeFormat("en-CA",{timeZone:"America/New_York",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date()),d=Math.round((Date.parse(t+"T00:00:00Z")-Date.parse(el.dataset.checked+"T00:00:00Z"))/864e5);
   if (isNaN(d) || d < 0) return;
   el.title = el.textContent;
   el.textContent = d === 0 ? "Checked today" : d === 1 ? "Checked yesterday" : "Checked " + d + " days ago";
