@@ -128,7 +128,7 @@
 <script>
 /* Freshness: turns the check date into "Checked N days ago" and flags pages over 45 days old. Runs only in your browser. */
 document.querySelectorAll("[data-checked]").forEach(function (el) {
-  var d = Math.floor((Date.now() - Date.parse(el.dataset.checked + "T12:00:00-05:00")) / 864e5);
+  var t=new Intl.DateTimeFormat("en-CA",{timeZone:"America/New_York",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date()),d=Math.round((Date.parse(t+"T00:00:00Z")-Date.parse(el.dataset.checked+"T00:00:00Z"))/864e5);
   if (isNaN(d) || d < 0) return;
   el.title = el.textContent;
   el.textContent = d === 0 ? "Checked today" : d === 1 ? "Checked yesterday" : "Checked " + d + " days ago";
