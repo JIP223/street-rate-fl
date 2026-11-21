@@ -61,7 +61,7 @@
     <p class="eyebrow">Collier County · 10×10 storage</p>
     <!-- TEMPLATE 2 · question and answer -->
     <h1>What does 10×10 storage cost in Collier County?</h1>
-    <p class="lede">Public Storage shows eight priced 10×10 units in Collier County, all in Naples. Six list $1 for the first month and then an online rent from $59 to $106 a month; two run a four-month offer instead. At 3807 White Lake Blvd no first-month offer is shown. Every amount below was shown on the company's own page on November 21, 2026.</p>
+    <p class="lede">Public Storage shows eight priced 10×10 units in Collier County, all in Naples. Five list $1 for the first month and then an online rent from $59 to $106 a month; two run a four-month offer instead. At 3807 White Lake Blvd no first-month offer is shown. Every amount below was shown on the company's own page on November 21, 2026.</p>
     <!-- TEMPLATE 3 · check date and coverage -->
     <div class="fresh"><span class="pill" data-checked="2026-11-21">Checked November 21, 2026</span><span>1 companies · 8 priced listings</span><a href="about.html">How we check prices</a></div>
     <!-- TEMPLATE 4 · at a glance -->
@@ -85,7 +85,7 @@
         <p class="unit">10×10 · outside unit, drive-up access, ground floor, rollup door</p>
         <div class="rates"><span class="rate promo">$53<small>/mo, months 1–4 (50% off)</small></span> <span class="rate later">$105<small>/mo, months 5–12</small></span></div>
         <ul class="facts"><li>One-time admin fee: $29.</li><li>The company shows the first four months at 50% off, then the months 5–12 rent.</li></ul>
-        <p class="source"><a href="https://www.publicstorage.com/self-storage-fl-naples/10x10-storage-units">Public Storage 10×10 storage page, Naples area</a>. Checked November 21, 2026 (Eastern time).</p>
+        <p class="source"><a href="https://www.publicstorage.com/self-storage-fl-naples/536.html">Public Storage facility page, 3555 Radio Road</a>. Checked November 21, 2026 (Eastern time).</p>
       </article>
       <article class="card facility">
         <h3>1597 Pine Ridge Road, Naples</h3>
@@ -159,7 +159,7 @@
       </div>
       <!-- TEMPLATE 9 · sources and corrections -->
       <h2>Sources and corrections</h2>
-      <div class="note"><p>The links above go to the storage companies. The date shows when we read the source pages. Every price on this page was shown on the linked page on that date. Public Storage changes web rates often — check the link for today's price.</p><ul><li><a href="https://www.publicstorage.com/self-storage-fl-naples/10x10-storage-units">Public Storage 10×10 storage page, Naples area</a></li></ul><p>Have a different written quote? <a href="contact.html">Send a correction</a> with the company, unit size and quote date.</p></div>
+      <div class="note"><p>The links above go to the storage companies. The date shows when we read the source pages. Every price on this page was shown on the linked page on that date. Public Storage changes web rates often — check the link for today's price.</p><ul><li><a href="https://www.publicstorage.com/self-storage-fl-naples/10x10-storage-units">Public Storage 10×10 storage page, Naples area</a></li><li><a href="https://www.publicstorage.com/self-storage-fl-naples/536.html">Public Storage facility page, 3555 Radio Road</a></li></ul><p>Have a different written quote? <a href="contact.html">Send a correction</a> with the company, unit size and quote date.</p></div>
     </div>
   </div>
 </main>
@@ -193,7 +193,7 @@
 <script>
 /* Freshness: turns the check date into "Checked N days ago" and flags pages over 45 days old. Runs only in your browser. */
 document.querySelectorAll("[data-checked]").forEach(function (el) {
-  var d = Math.floor((Date.now() - Date.parse(el.dataset.checked + "T12:00:00-05:00")) / 864e5);
+  var t=new Intl.DateTimeFormat("en-CA",{timeZone:"America/New_York",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date()),d=Math.round((Date.parse(t+"T00:00:00Z")-Date.parse(el.dataset.checked+"T00:00:00Z"))/864e5);
   if (isNaN(d) || d < 0) return;
   el.title = el.textContent;
   el.textContent = d === 0 ? "Checked today" : d === 1 ? "Checked yesterday" : "Checked " + d + " days ago";
