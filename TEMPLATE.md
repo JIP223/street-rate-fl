@@ -34,3 +34,6 @@ Use these substitutions in reader-facing copy:
 Keep numbers, addresses, dates, source links, meta tags, canonicals, and `data-checked` pills unchanged when you edit wording.
 
 The top nav on every page is Home, Counties (`counties.html`), How we check, and Contact. Do not put a city or county name in the header nav. Only `counties.html` should mark Counties as the current page. Tampa and each county stay linked from the home page and from `counties.html`.
+
+The footer Pages list should include a Wind link to `wind/`. Do not add Wind to the header nav. The site-wide footer disclosure is: “We may earn from disclosed partner links; we never take pay to change prices or rankings. No partner links are active yet. Figures can change. Confirm with the company or your insurer before you pay.”
+

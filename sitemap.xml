@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://streetratefl.com/</loc><lastmod>2026-11-20</lastmod></url>
-  <url><loc>https://streetratefl.com/about.html</loc><lastmod>2026-11-19</lastmod></url>
+  <url><loc>https://streetratefl.com/</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://streetratefl.com/about.html</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://streetratefl.com/counties.html</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://streetratefl.com/tampa-10x10.html</loc><lastmod>2026-11-18</lastmod></url>
   <url><loc>https://streetratefl.com/miami-dade-county-storage.html</loc><lastmod>2026-11-19</lastmod></url>
@@ -63,4 +63,7 @@
   <url><loc>https://streetratefl.com/escambia-county-storage.html</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://streetratefl.com/hillsborough-county-storage.html</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://streetratefl.com/levy-county-storage.html</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://streetratefl.com/wind/</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://streetratefl.com/wind/oir-b1-1802.html</loc><lastmod>2026-11-19</lastmod></url>
+  <url><loc>https://streetratefl.com/wind/how-windstorm-discounts-work.html</loc><lastmod>2026-11-19</lastmod></url>
 </urlset>
