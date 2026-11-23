@@ -383,7 +383,7 @@
 </footer>
 
 <script>
-/* Freshness: turns the check date into "Checked N days ago" and flags pages over 45 days old. No tracking. */
+/* Freshness: turns the check date into "Checked N days ago" and flags pages over 45 days old. */
 document.querySelectorAll("[data-checked]").forEach(function (el) {
   var t=new Intl.DateTimeFormat("en-CA",{timeZone:"America/New_York",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date()),d=Math.round((Date.parse(t+"T00:00:00Z")-Date.parse(el.dataset.checked+"T00:00:00Z"))/864e5);
   if (isNaN(d) || d < 0) return;

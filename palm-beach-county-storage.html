@@ -38,7 +38,7 @@
     <a class="brand" href="./"><span class="brand-mark" aria-hidden="true"></span>Street Rate FL</a>
     <nav class="site-nav" aria-label="Primary">
       <a href="./">Home</a>
-      <a href="palm-beach-county-storage.html" aria-current="page">Palm Beach 10×10</a>
+      <a href="counties.html">Counties</a>
       <a href="about.html">How we check</a>
       <a href="contact.html">Contact</a>
     </nav>
@@ -281,7 +281,7 @@
 </footer>
 
 <script>
-/* Freshness: turns the check date into "Checked N days ago" and flags pages over 45 days old. No tracking. */
+/* Freshness: turns the check date into "Checked N days ago" and flags pages over 45 days old. */
 document.querySelectorAll("[data-checked]").forEach(function (el) {
   var t=new Intl.DateTimeFormat("en-CA",{timeZone:"America/New_York",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date()),d=Math.round((Date.parse(t+"T00:00:00Z")-Date.parse(el.dataset.checked+"T00:00:00Z"))/864e5);
   if (isNaN(d) || d < 0) return;

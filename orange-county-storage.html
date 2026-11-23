@@ -30,7 +30,7 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-head"><div class="wrap">
 <a class="brand" href="./"><span class="brand-mark" aria-hidden="true"></span>Street Rate FL</a>
-<nav class="site-nav" aria-label="Primary"><a href="./">Home</a><a href="tampa-10x10.html">Tampa 10×10</a><a href="about.html">How we check</a><a href="contact.html">Contact</a></nav>
+<nav class="site-nav" aria-label="Primary"><a href="./">Home</a><a href="counties.html">Counties</a><a href="about.html">How we check</a><a href="contact.html">Contact</a></nav>
 </div></header>
 <main id="main">
 <div class="wrap narrow">
@@ -102,7 +102,7 @@
 <div><h2>Disclosure</h2><p>We may earn from disclosed partner links; we never take pay to change prices or rankings. No partner links are active yet. Figures can change. Confirm with the company or your insurer before you pay.</p></div></div>
 <p class="small muted" style="margin-top:1.5rem">© 2026 Street Rate FL. Not affiliated with the companies listed.</p></div></footer>
 <script>
-/* Freshness: updates the checked date without tracking. */
+/* Freshness: updates the checked date in the browser. */
 document.querySelectorAll("[data-checked]").forEach(function (el) {
  var t=new Intl.DateTimeFormat("en-CA",{timeZone:"America/New_York",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date()),d=Math.round((Date.parse(t+"T00:00:00Z")-Date.parse(el.dataset.checked+"T00:00:00Z"))/864e5);
  if(isNaN(d)||d<0)return;el.title=el.textContent;el.textContent=d===0?"Checked today":d===1?"Checked yesterday":"Checked "+d+" days ago";if(d>45)el.classList.add("is-old");
