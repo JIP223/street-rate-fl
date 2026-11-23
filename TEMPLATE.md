@@ -35,7 +35,9 @@ Use these substitutions in reader-facing copy:
 
 Keep numbers, addresses, dates, source links, meta tags, canonicals, and `data-checked` pills unchanged when you edit wording.
 
-The top nav on every page is Home, Counties (`counties.html`), How we check, and Contact. Do not put a city or county name in the header nav. Only `counties.html` should mark Counties as the current page. Tampa and each county stay linked from the home page and from `counties.html`.
+The top nav on every page is Storage prices (`counties.html`), Wind insurance (`wind/`), About, and Contact. Do not put a city or county name in the header nav. The brand mark still links to the home page. Mark Storage prices as the current item on `counties.html`, `tampa-10x10.html`, and every county page. Mark Wind insurance as the current item on every `/wind/` page. Mark About or Contact when that page is open. Leave no item current on the home page.
 
-The footer Pages list should include a Wind link to `wind/`. Do not add Wind to the header nav. The site-wide footer disclosure is: “If you use a partner link we tell you about, we may earn a fee. We never take money to change prices or rankings. No partner links are active yet. Figures can change. Confirm with the company or your insurer before you pay.”
+“How we check” is not in the header nav. Keep it reachable in the footer as “How we check prices,” which links to `about.html`. Tampa and each county stay linked from the home page and from `counties.html`.
+
+The footer Pages list should include a Wind link to `wind/`. The site-wide footer disclosure is: “If you use a partner link we tell you about, we may earn a fee. We never take money to change prices or rankings. No partner links are active yet. Figures can change. Confirm with the company or your insurer before you pay.”
 
