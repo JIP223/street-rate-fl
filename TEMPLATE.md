@@ -5,7 +5,7 @@ Every city/size page copies `tampa-10x10.html`. Its sections are marked in the H
 1. Crumbs + eyebrow (City · Size).
 2. H1 = the question; lede = the answer in plain words.
 3. Freshness bar: one `data-checked="YYYY-MM-DD"` pill (the script turns it into "Checked N days ago" and greys it after 45 days), company and listing counts, method link.
-4. At a glance: three numbers, arithmetic from the rows below only.
+4. At a glance: three numbers, added up only from the rows below.
 5. One section per storage company, one `.facility` card per listing. The 12-bar strip needs `style="--p:PROMO/LATER"` (for example 46/92 = .5). Only use it when the company shows a later price.
 6. First-year math table, formula shown in each cell.
 7. "Before you sign" checklist, specific to what the company pages said.
@@ -18,7 +18,7 @@ Every page includes the standard Google Analytics (gtag.js) snippet in `<head>`,
 
 ## Plain English
 
-Write for a regular person searching for storage, not for the industry. Use short sentences. Do not invent prices, addresses, or dates. When you are quoting the company's own wording, keep that wording.
+Write for a regular person searching for storage, not for the industry. Use short sentences that sound like everyday spoken English, not stiff or formal phrasing. Do not invent prices, addresses, or dates. When you are quoting the company’s own wording, keep that wording.
 
 Use these substitutions in reader-facing copy:
 
@@ -35,5 +35,5 @@ Keep numbers, addresses, dates, source links, meta tags, canonicals, and `data-c
 
 The top nav on every page is Home, Counties (`counties.html`), How we check, and Contact. Do not put a city or county name in the header nav. Only `counties.html` should mark Counties as the current page. Tampa and each county stay linked from the home page and from `counties.html`.
 
-The footer Pages list should include a Wind link to `wind/`. Do not add Wind to the header nav. The site-wide footer disclosure is: “We may earn from disclosed partner links; we never take pay to change prices or rankings. No partner links are active yet. Figures can change. Confirm with the company or your insurer before you pay.”
+The footer Pages list should include a Wind link to `wind/`. Do not add Wind to the header nav. The site-wide footer disclosure is: “If you use a partner link we tell you about, we may earn a fee. We never take money to change prices or rankings. No partner links are active yet. Figures can change. Confirm with the company or your insurer before you pay.”
 
