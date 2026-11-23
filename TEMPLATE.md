@@ -7,6 +7,8 @@ Every city/size page copies `tampa-10x10.html`. Its sections are marked in the H
 3. Freshness bar: one `data-checked="YYYY-MM-DD"` pill (the script turns it into "Checked N days ago" and greys it after 45 days), company and listing counts, method link.
 4. At a glance: three numbers, added up only from the rows below.
 5. One section per storage company, one `.facility` card per listing. The 12-bar strip needs `style="--p:PROMO/LATER"` (for example 46/92 = .5). Only use it when the company shows a later price.
+
+Each `.facility` card must include a visible source link in a `<p class="source">`, worded `See this price on [Company] →`, with `target="_blank"` and `rel="noopener"`, pointing to that facility’s official listing URL. Never invent a URL. If the official page cannot be found, leave the card without a link and note it.
 6. First-year math table, formula shown in each cell.
 7. "Before you sign" checklist, specific to what the company pages said.
 8. Partner block, one per page, after the advice, always labelled. Disabled until an account exists.
