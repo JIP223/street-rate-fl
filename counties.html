@@ -6,13 +6,13 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-L0DSH6DGEX"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L0DSH6DGEX');</script>
   <title>Storage prices by county — Street Rate FL</title>
-  <meta name="description" content="Florida 10×10 storage-price pages by county, plus a Tampa city page. Every price is copied from a company’s own website and dated.">
+  <meta name="description" content="Find Florida 10×10 storage prices by ZIP code or on the map. Every price is copied from a company’s own website and dated.">
   <link rel="canonical" href="https://streetratefl.com/counties.html">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#f5f3ee" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0f1216" media="(prefers-color-scheme: dark)">
   <meta property="og:title" content="Storage prices by county — Street Rate FL">
-  <meta property="og:description" content="Florida 10×10 storage-price pages by county, plus a Tampa city page. Every price is copied from a company’s own website and dated.">
+  <meta property="og:description" content="Find Florida 10×10 storage prices by ZIP code or on the map. Every price is copied from a company’s own website and dated.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://streetratefl.com/counties.html">
   <link rel="stylesheet" href="style.css">
@@ -34,12 +34,24 @@
 <div class="wrap">
 
   <nav class="crumbs" aria-label="Breadcrumb"><a href="./">Home</a> › Counties</nav>
-  <p class="eyebrow">Florida directory</p>
-  <h1>Storage prices by county.</h1>
-  <p class="lede">Tap a county on the map to see every 10×10 price we took from a company’s own website there, and the date we checked. If a company didn’t post a price, we say so. We’ll add more counties as we confirm them.</p>
+  <p class="eyebrow">Florida storage prices</p>
+  <h1>Search by ZIP, or tap the map.</h1>
+  <p class="lede">We’ll take you to that county’s prices — the ad price next to what you’ll pay later, copied from each company’s own website.</p>
 
-  <section class="map-grid" id="map" aria-label="Florida county map">
-<svg class="fl" viewBox="0 0 840 672" role="img" aria-label="Map of Florida's 67 counties as tiles. Colored tiles have storage prices; tap one to see its listings.">
+  <div class="zip-search" data-zip-search>
+    <form action="counties.html" method="get" role="search">
+      <label for="zip">Search by ZIP code</label>
+      <div class="zip-row">
+        <input id="zip" class="zip-input" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="Florida ZIP, like 33186" enterkeyhint="search" aria-describedby="zip-help">
+        <button type="submit">See prices</button>
+      </div>
+    </form>
+    <p id="zip-help" class="small muted" style="margin:.55rem 0 0">We’ll open that county’s price page. ZIPs that cross a county line go to the county with the largest share.</p>
+    <div class="zip-msg" role="status" aria-live="polite"></div>
+  </div>
+
+<section class="map-grid" id="map" aria-label="Florida county map">
+<svg class="fl" viewBox="0 0 840 672" role="img" aria-label="Map of Florida’s 67 counties as tiles. Colored tiles have storage prices; tap one to see its listings.">
 <text x="150" y="330" class="sea">Gulf of Mexico</text>
 <text x="830" y="40" text-anchor="end" class="sea sm">Georgia</text>
 <text x="835" y="660" text-anchor="end" class="sea sm">Atlantic</text>
@@ -53,24 +65,24 @@
 <a href="gadsden-county-storage.html" class="ct t1"><title>Gadsden County: from $99/mo</title><rect x="336" y="0" width="52" height="52" rx="6"/><text x="362" y="22" class="ab">GAD</text><text x="362" y="40" class="pr">$99</text></a>
 <a href="leon-county-storage.html" class="ct t4"><title>Leon County: from $53/mo</title><rect x="392" y="0" width="52" height="52" rx="6"/><text x="418" y="22" class="ab">LEO</text><text x="418" y="40" class="pr">$53</text></a>
 <a href="jefferson-county-storage.html" class="ct t0"><title>Jefferson County: no posted 10x10 price</title><rect x="448" y="0" width="52" height="52" rx="6"/><text x="474" y="22" class="ab">JEF</text><text x="474" y="40" class="pr">call</text></a>
-<a href="#madison" class="ct t0"><title>Madison County: no posted 10x10 price</title><rect x="504" y="0" width="52" height="52" rx="6"/><text x="530" y="22" class="ab">MAD</text><text x="530" y="40" class="pr">call</text></a>
-<a href="#hamilton" class="ct t0"><title>Hamilton County: no posted 10x10 price</title><rect x="560" y="0" width="52" height="52" rx="6"/><text x="586" y="22" class="ab">HAM</text><text x="586" y="40" class="pr">call</text></a>
-<a href="#columbia" class="ct t2"><title>Columbia County: from $80/mo</title><rect x="616" y="0" width="52" height="52" rx="6"/><text x="642" y="22" class="ab">COL</text><text x="642" y="40" class="pr">$80</text></a>
-<a href="#baker" class="ct t1"><title>Baker County: from $124.99/mo</title><rect x="672" y="0" width="52" height="52" rx="6"/><text x="698" y="22" class="ab">BAK</text><text x="698" y="40" class="pr">$124.99</text></a>
+<a href="madison-county-storage.html" class="ct t0"><title>Madison County: no posted 10x10 price</title><rect x="504" y="0" width="52" height="52" rx="6"/><text x="530" y="22" class="ab">MAD</text><text x="530" y="40" class="pr">call</text></a>
+<a href="hamilton-county-storage.html" class="ct t0"><title>Hamilton County: no posted 10x10 price</title><rect x="560" y="0" width="52" height="52" rx="6"/><text x="586" y="22" class="ab">HAM</text><text x="586" y="40" class="pr">call</text></a>
+<a href="columbia-county-storage.html" class="ct t2"><title>Columbia County: from $80/mo</title><rect x="616" y="0" width="52" height="52" rx="6"/><text x="642" y="22" class="ab">COL</text><text x="642" y="40" class="pr">$80</text></a>
+<a href="baker-county-storage.html" class="ct t1"><title>Baker County: from $124.99/mo</title><rect x="672" y="0" width="52" height="52" rx="6"/><text x="698" y="22" class="ab">BAK</text><text x="698" y="40" class="pr">$124.99</text></a>
 <a href="nassau-county-storage.html" class="ct t3"><title>Nassau County: $69.50/mo offer</title><rect x="728" y="0" width="52" height="52" rx="6"/><text x="754" y="22" class="ab">NAS</text><text x="754" y="40" class="pr">$69.50</text></a>
 <a href="bay-county-storage.html" class="ct t4"><title>Bay County: from $34.50/mo first month</title><rect x="168" y="56" width="52" height="52" rx="6"/><text x="194" y="78" class="ab">BAY</text><text x="194" y="96" class="pr">$34.50</text></a>
-<a href="#washington" class="ct t3"><title>Washington County: from $75/mo</title><rect x="224" y="56" width="52" height="52" rx="6"/><text x="250" y="78" class="ab">WAS</text><text x="250" y="96" class="pr">$75</text></a>
+<a href="washington-county-storage.html" class="ct t3"><title>Washington County: from $75/mo</title><rect x="224" y="56" width="52" height="52" rx="6"/><text x="250" y="78" class="ab">WAS</text><text x="250" y="96" class="pr">$75</text></a>
 <a href="calhoun-county-storage.html" class="ct t0"><title>Calhoun County: no posted 10x10 price</title><rect x="280" y="56" width="52" height="52" rx="6"/><text x="306" y="78" class="ab">CAL</text><text x="306" y="96" class="pr">call</text></a>
 <a href="liberty-county-storage.html" class="ct t3"><title>Liberty County: $62.70 for one month</title><rect x="336" y="56" width="52" height="52" rx="6"/><text x="362" y="78" class="ab">LIB</text><text x="362" y="96" class="pr">$62.70</text></a>
 <a href="wakulla-county-storage.html" class="ct t2"><title>Wakulla County: from $85/mo</title><rect x="392" y="56" width="52" height="52" rx="6"/><text x="418" y="78" class="ab">WAK</text><text x="418" y="96" class="pr">$85</text></a>
 <a href="taylor-county-storage.html" class="ct t0"><title>Taylor County: no posted 10x10 price</title><rect x="448" y="56" width="52" height="52" rx="6"/><text x="474" y="78" class="ab">TAY</text><text x="474" y="96" class="pr">call</text></a>
 <a href="lafayette-county-storage.html" class="ct t0"><title>Lafayette County: no posted 10x10 price</title><rect x="504" y="56" width="52" height="52" rx="6"/><text x="530" y="78" class="ab">LAF</text><text x="530" y="96" class="pr">call</text></a>
-<a href="#suwannee" class="ct t2"><title>Suwannee County: $87.99/mo</title><rect x="560" y="56" width="52" height="52" rx="6"/><text x="586" y="78" class="ab">SUW</text><text x="586" y="96" class="pr">$87.99</text></a>
-<a href="#union" class="ct t0"><title>Union County: no posted 10x10 price</title><rect x="616" y="56" width="52" height="52" rx="6"/><text x="642" y="78" class="ab">UNI</text><text x="642" y="96" class="pr">call</text></a>
+<a href="suwannee-county-storage.html" class="ct t2"><title>Suwannee County: $87.99/mo</title><rect x="560" y="56" width="52" height="52" rx="6"/><text x="586" y="78" class="ab">SUW</text><text x="586" y="96" class="pr">$87.99</text></a>
+<a href="union-county-storage.html" class="ct t0"><title>Union County: no posted 10x10 price</title><rect x="616" y="56" width="52" height="52" rx="6"/><text x="642" y="78" class="ab">UNI</text><text x="642" y="96" class="pr">call</text></a>
 <a href="bradford-county-storage.html" class="ct t0"><title>Bradford County: no posted 10x10 price</title><rect x="672" y="56" width="52" height="52" rx="6"/><text x="698" y="78" class="ab">BRA</text><text x="698" y="96" class="pr">call</text></a>
 <a href="duval-county-storage.html" class="ct t3"><title>Duval County: rents $67–$148/mo</title><rect x="728" y="56" width="52" height="52" rx="6"/><text x="754" y="78" class="ab">DUV</text><text x="754" y="96" class="pr">$67</text></a>
 <a href="gulf-county-storage.html" class="ct t2"><title>Gulf County: from $85/mo</title><rect x="280" y="112" width="52" height="52" rx="6"/><text x="306" y="134" class="ab">GUL</text><text x="306" y="152" class="pr">$85</text></a>
-<a href="#franklin" class="ct t2"><title>Franklin County: from $82.50/mo</title><rect x="336" y="112" width="52" height="52" rx="6"/><text x="362" y="134" class="ab">FRA</text><text x="362" y="152" class="pr">$82.50</text></a>
+<a href="franklin-county-storage.html" class="ct t2"><title>Franklin County: from $82.50/mo</title><rect x="336" y="112" width="52" height="52" rx="6"/><text x="362" y="134" class="ab">FRA</text><text x="362" y="152" class="pr">$82.50</text></a>
 <a href="dixie-county-storage.html" class="ct t0"><title>Dixie County: no posted 10x10 price</title><rect x="504" y="112" width="52" height="52" rx="6"/><text x="530" y="134" class="ab">DIX</text><text x="530" y="152" class="pr">call</text></a>
 <a href="gilchrist-county-storage.html" class="ct t0"><title>Gilchrist County: no posted 10x10 price</title><rect x="560" y="112" width="52" height="52" rx="6"/><text x="586" y="134" class="ab">GIL</text><text x="586" y="152" class="pr">call</text></a>
 <a href="alachua-county-storage.html" class="ct t4"><title>Alachua County: rents $47–$130/mo</title><rect x="616" y="112" width="52" height="52" rx="6"/><text x="642" y="134" class="ab">ALA</text><text x="642" y="152" class="pr">$47</text></a>
@@ -85,32 +97,32 @@
 <a href="lake-county-storage.html" class="ct t3"><title>Lake County: from $62/mo online</title><rect x="672" y="224" width="52" height="52" rx="6"/><text x="698" y="246" class="ab">LAK</text><text x="698" y="264" class="pr">$62</text></a>
 <a href="volusia-county-storage.html" class="ct t4"><title>Volusia County: from $46.20/mo first 4 months</title><rect x="728" y="224" width="52" height="52" rx="6"/><text x="754" y="246" class="ab">VOL</text><text x="754" y="264" class="pr">$46.20</text></a>
 <a href="hernando-county-storage.html" class="ct t4"><title>Hernando County: from $49/mo online</title><rect x="560" y="280" width="52" height="52" rx="6"/><text x="586" y="302" class="ab">HER</text><text x="586" y="320" class="pr">$49</text></a>
-<a href="#pasco" class="ct t3"><title>Pasco County: from $65/mo</title><rect x="616" y="280" width="52" height="52" rx="6"/><text x="642" y="302" class="ab">PAS</text><text x="642" y="320" class="pr">$65</text></a>
+<a href="pasco-county-storage.html" class="ct t3"><title>Pasco County: from $65/mo</title><rect x="616" y="280" width="52" height="52" rx="6"/><text x="642" y="302" class="ab">PAS</text><text x="642" y="320" class="pr">$65</text></a>
 <a href="orange-county-storage.html" class="ct t4"><title>Orange County: from $46/mo</title><rect x="672" y="280" width="52" height="52" rx="6"/><text x="698" y="302" class="ab">ORA</text><text x="698" y="320" class="pr">$46</text></a>
 <a href="seminole-county-storage.html" class="ct t4"><title>Seminole County: from $39.50/mo first 4 months</title><rect x="728" y="280" width="52" height="52" rx="6"/><text x="754" y="302" class="ab">SEM</text><text x="754" y="320" class="pr">$39.50</text></a>
-<a href="#pinellas" class="ct t3"><title>Pinellas County: from $75/mo</title><rect x="560" y="336" width="52" height="52" rx="6"/><text x="586" y="367" class="ab">PIN</text><text x="586" y="385" class="pr">$75</text></a>
+<a href="pinellas-county-storage.html" class="ct t3"><title>Pinellas County: from $75/mo</title><rect x="560" y="336" width="52" height="52" rx="6"/><text x="586" y="367" class="ab">PIN</text><text x="586" y="385" class="pr">$75</text></a>
 <a href="hillsborough-county-storage.html" class="ct t3"><title>Hillsborough County: from $72/mo</title><rect x="616" y="336" width="52" height="52" rx="6"/><text x="642" y="358" class="ab">HIL</text><text x="642" y="376" class="pr">$72</text></a>
 <a href="polk-county-storage.html" class="ct t4"><title>Polk County: from $58/mo online</title><rect x="672" y="336" width="52" height="52" rx="6"/><text x="698" y="358" class="ab">POL</text><text x="698" y="376" class="pr">$58</text></a>
 <a href="osceola-county-storage.html" class="ct t4"><title>Osceola County: from $49/mo</title><rect x="728" y="336" width="52" height="52" rx="6"/><text x="754" y="358" class="ab">OSC</text><text x="754" y="376" class="pr">$49</text></a>
 <a href="brevard-county-storage.html" class="ct t4"><title>Brevard County: from $38/mo online</title><rect x="784" y="336" width="52" height="52" rx="6"/><text x="810" y="358" class="ab">BRE</text><text x="810" y="376" class="pr">$38</text></a>
 <a href="manatee-county-storage.html" class="ct t4"><title>Manatee County: from $41/mo online</title><rect x="560" y="392" width="52" height="52" rx="6"/><text x="586" y="414" class="ab">MAN</text><text x="586" y="432" class="pr">$41</text></a>
 <a href="hardee-county-storage.html" class="ct t0"><title>Hardee County: no posted 10x10 price</title><rect x="616" y="392" width="52" height="52" rx="6"/><text x="642" y="414" class="ab">HAR</text><text x="642" y="432" class="pr">call</text></a>
-<a href="#highlands" class="ct t2"><title>Highlands County: $85/mo cash</title><rect x="672" y="392" width="52" height="52" rx="6"/><text x="698" y="414" class="ab">HIG</text><text x="698" y="432" class="pr">$85</text></a>
-<a href="#okeechobee" class="ct t2"><title>Okeechobee County: from $89/mo</title><rect x="728" y="392" width="52" height="52" rx="6"/><text x="754" y="414" class="ab">OKE</text><text x="754" y="432" class="pr">$89</text></a>
+<a href="highlands-county-storage.html" class="ct t2"><title>Highlands County: $85/mo cash</title><rect x="672" y="392" width="52" height="52" rx="6"/><text x="698" y="414" class="ab">HIG</text><text x="698" y="432" class="pr">$85</text></a>
+<a href="okeechobee-county-storage.html" class="ct t2"><title>Okeechobee County: from $89/mo</title><rect x="728" y="392" width="52" height="52" rx="6"/><text x="754" y="414" class="ab">OKE</text><text x="754" y="432" class="pr">$89</text></a>
 <a href="indian-river-county-storage.html" class="ct t4"><title>Indian River County: from $42/mo first 4 months</title><rect x="784" y="392" width="52" height="52" rx="6"/><text x="810" y="414" class="ab">IRC</text><text x="810" y="432" class="pr">$42</text></a>
 <a href="sarasota-county-storage.html" class="ct t3"><title>Sarasota County: from $60/mo</title><rect x="560" y="448" width="52" height="52" rx="6"/><text x="586" y="470" class="ab">SAR</text><text x="586" y="488" class="pr">$60</text></a>
 <a href="desoto-county-storage.html" class="ct t0"><title>DeSoto County: no posted 10x10 price</title><rect x="616" y="448" width="52" height="52" rx="6"/><text x="642" y="470" class="ab">DES</text><text x="642" y="488" class="pr">call</text></a>
 <a href="glades-county-storage.html" class="ct t0"><title>Glades County: no posted 10x10 price</title><rect x="672" y="448" width="52" height="52" rx="6"/><text x="698" y="470" class="ab">GLA</text><text x="698" y="488" class="pr">call</text></a>
-<a href="#st-lucie" class="ct t4"><title>St. Lucie County: from $50/mo</title><rect x="784" y="448" width="52" height="52" rx="6"/><text x="810" y="470" class="ab">STL</text><text x="810" y="488" class="pr">$50</text></a>
+<a href="st-lucie-county-storage.html" class="ct t4"><title>St. Lucie County: from $50/mo</title><rect x="784" y="448" width="52" height="52" rx="6"/><text x="810" y="470" class="ab">STL</text><text x="810" y="488" class="pr">$50</text></a>
 <a href="charlotte-county-storage.html" class="ct t4"><title>Charlotte County: from $36/mo online</title><rect x="616" y="504" width="52" height="52" rx="6"/><text x="642" y="526" class="ab">CHA</text><text x="642" y="544" class="pr">$36</text></a>
 <a href="hendry-county-storage.html" class="ct t0"><title>Hendry County: no posted 10x10 price</title><rect x="672" y="504" width="52" height="52" rx="6"/><text x="698" y="526" class="ab">HEN</text><text x="698" y="544" class="pr">call</text></a>
-<a href="#palm-beach" class="ct t3"><title>Palm Beach County: from $59/mo</title><rect x="728" y="504" width="52" height="52" rx="6"/><text x="754" y="535" class="ab">PBC</text><text x="754" y="553" class="pr">$59</text></a>
+<a href="palm-beach-county-storage.html" class="ct t3"><title>Palm Beach County: from $59/mo</title><rect x="728" y="504" width="52" height="52" rx="6"/><text x="754" y="535" class="ab">PBC</text><text x="754" y="553" class="pr">$59</text></a>
 <a href="martin-county-storage.html" class="ct t3"><title>Martin County: from $67/mo first 4 months</title><rect x="784" y="504" width="52" height="52" rx="6"/><text x="810" y="526" class="ab">MRT</text><text x="810" y="544" class="pr">$67</text></a>
 <a href="lee-county-storage.html" class="ct t3"><title>Lee County: from $54/mo</title><rect x="616" y="560" width="52" height="52" rx="6"/><text x="642" y="582" class="ab">LEE</text><text x="642" y="600" class="pr">$54</text></a>
 <a href="collier-county-storage.html" class="ct t4"><title>Collier County: from $59/mo online</title><rect x="672" y="560" width="52" height="52" rx="6"/><text x="698" y="582" class="ab">CLR</text><text x="698" y="600" class="pr">$59</text></a>
 <a href="broward-county-storage.html" class="ct t3"><title>Broward County: ad prices $78–$188.40</title><rect x="728" y="560" width="52" height="52" rx="6"/><text x="754" y="578" class="ab">BRO</text><text x="754" y="596" class="pr">$78</text></a>
-<a href="#monroe" class="ct t3"><title>Monroe County: $75/mo first 3 months</title><rect x="672" y="616" width="52" height="52" rx="6"/><text x="698" y="638" class="ab">MON</text><text x="698" y="656" class="pr">$75</text></a>
-<a href="#miami-dade" class="ct t3"><title>Miami-Dade County: from $73/mo</title><rect x="728" y="616" width="52" height="52" rx="6"/><text x="754" y="638" class="ab">MDC</text><text x="754" y="656" class="pr">$73</text></a>
+<a href="monroe-county-storage.html" class="ct t3"><title>Monroe County: $75/mo first 3 months</title><rect x="672" y="616" width="52" height="52" rx="6"/><text x="698" y="638" class="ab">MON</text><text x="698" y="656" class="pr">$75</text></a>
+<a href="miami-dade-county-storage.html" class="ct t3"><title>Miami-Dade County: from $73/mo</title><rect x="728" y="616" width="52" height="52" rx="6"/><text x="754" y="638" class="ab">MDC</text><text x="754" y="656" class="pr">$73</text></a>
 </svg>
 <aside>
 <p class="eyebrow">Cheapest 10&times;10 ad price</p>
@@ -121,13 +133,14 @@
 <div class="key"><span class="sw k0"></span>Checked, no price posted</div>
 <div class="key"><span class="sw koff"></span>Not checked yet</div>
 <p class="small muted">67 of 67 counties so far. Each tile is a county, placed roughly where it sits on the map.</p>
-<div class="jump"><a href="alachua-county-storage.html">Alachua</a><a href="#baker">Baker</a><a href="bay-county-storage.html">Bay</a><a href="bradford-county-storage.html">Bradford</a><a href="brevard-county-storage.html">Brevard</a><a href="broward-county-storage.html">Broward</a><a href="calhoun-county-storage.html">Calhoun</a><a href="charlotte-county-storage.html">Charlotte</a><a href="citrus-county-storage.html">Citrus</a><a href="clay-county-storage.html">Clay</a><a href="collier-county-storage.html">Collier</a><a href="#columbia">Columbia</a><a href="desoto-county-storage.html">DeSoto</a><a href="dixie-county-storage.html">Dixie</a><a href="duval-county-storage.html">Duval</a><a href="escambia-county-storage.html">Escambia</a><a href="flagler-county-storage.html">Flagler</a><a href="#franklin">Franklin</a><a href="gadsden-county-storage.html">Gadsden</a><a href="gilchrist-county-storage.html">Gilchrist</a><a href="glades-county-storage.html">Glades</a><a href="gulf-county-storage.html">Gulf</a><a href="#hamilton">Hamilton</a><a href="hardee-county-storage.html">Hardee</a><a href="hendry-county-storage.html">Hendry</a><a href="hernando-county-storage.html">Hernando</a><a href="#highlands">Highlands</a><a href="hillsborough-county-storage.html">Hillsborough</a><a href="holmes-county-storage.html">Holmes</a><a href="indian-river-county-storage.html">Indian River</a><a href="jackson-county-storage.html">Jackson</a><a href="jefferson-county-storage.html">Jefferson</a><a href="lafayette-county-storage.html">Lafayette</a><a href="lake-county-storage.html">Lake</a><a href="lee-county-storage.html">Lee</a><a href="leon-county-storage.html">Leon</a><a href="levy-county-storage.html">Levy</a><a href="liberty-county-storage.html">Liberty</a><a href="#madison">Madison</a><a href="manatee-county-storage.html">Manatee</a><a href="marion-county-storage.html">Marion</a><a href="martin-county-storage.html">Martin</a><a href="#miami-dade">Miami-Dade</a><a href="#monroe">Monroe</a><a href="nassau-county-storage.html">Nassau</a><a href="okaloosa-county-storage.html">Okaloosa</a><a href="#okeechobee">Okeechobee</a><a href="orange-county-storage.html">Orange</a><a href="osceola-county-storage.html">Osceola</a><a href="#palm-beach">Palm Beach</a><a href="#pasco">Pasco</a><a href="#pinellas">Pinellas</a><a href="polk-county-storage.html">Polk</a><a href="putnam-county-storage.html">Putnam</a><a href="santa-rosa-county-storage.html">Santa Rosa</a><a href="sarasota-county-storage.html">Sarasota</a><a href="seminole-county-storage.html">Seminole</a><a href="st-johns-county-storage.html">St. Johns</a><a href="#st-lucie">St. Lucie</a><a href="sumter-county-storage.html">Sumter</a><a href="#suwannee">Suwannee</a><a href="taylor-county-storage.html">Taylor</a><a href="#union">Union</a><a href="volusia-county-storage.html">Volusia</a><a href="wakulla-county-storage.html">Wakulla</a><a href="walton-county-storage.html">Walton</a><a href="#washington">Washington</a></div>
+<div class="jump"><a href="alachua-county-storage.html">Alachua</a><a href="baker-county-storage.html">Baker</a><a href="bay-county-storage.html">Bay</a><a href="bradford-county-storage.html">Bradford</a><a href="brevard-county-storage.html">Brevard</a><a href="broward-county-storage.html">Broward</a><a href="calhoun-county-storage.html">Calhoun</a><a href="charlotte-county-storage.html">Charlotte</a><a href="citrus-county-storage.html">Citrus</a><a href="clay-county-storage.html">Clay</a><a href="collier-county-storage.html">Collier</a><a href="columbia-county-storage.html">Columbia</a><a href="desoto-county-storage.html">DeSoto</a><a href="dixie-county-storage.html">Dixie</a><a href="duval-county-storage.html">Duval</a><a href="escambia-county-storage.html">Escambia</a><a href="flagler-county-storage.html">Flagler</a><a href="franklin-county-storage.html">Franklin</a><a href="gadsden-county-storage.html">Gadsden</a><a href="gilchrist-county-storage.html">Gilchrist</a><a href="glades-county-storage.html">Glades</a><a href="gulf-county-storage.html">Gulf</a><a href="hamilton-county-storage.html">Hamilton</a><a href="hardee-county-storage.html">Hardee</a><a href="hendry-county-storage.html">Hendry</a><a href="hernando-county-storage.html">Hernando</a><a href="highlands-county-storage.html">Highlands</a><a href="hillsborough-county-storage.html">Hillsborough</a><a href="holmes-county-storage.html">Holmes</a><a href="indian-river-county-storage.html">Indian River</a><a href="jackson-county-storage.html">Jackson</a><a href="jefferson-county-storage.html">Jefferson</a><a href="lafayette-county-storage.html">Lafayette</a><a href="lake-county-storage.html">Lake</a><a href="lee-county-storage.html">Lee</a><a href="leon-county-storage.html">Leon</a><a href="levy-county-storage.html">Levy</a><a href="liberty-county-storage.html">Liberty</a><a href="madison-county-storage.html">Madison</a><a href="manatee-county-storage.html">Manatee</a><a href="marion-county-storage.html">Marion</a><a href="martin-county-storage.html">Martin</a><a href="miami-dade-county-storage.html">Miami-Dade</a><a href="monroe-county-storage.html">Monroe</a><a href="nassau-county-storage.html">Nassau</a><a href="okaloosa-county-storage.html">Okaloosa</a><a href="okeechobee-county-storage.html">Okeechobee</a><a href="orange-county-storage.html">Orange</a><a href="osceola-county-storage.html">Osceola</a><a href="palm-beach-county-storage.html">Palm Beach</a><a href="pasco-county-storage.html">Pasco</a><a href="pinellas-county-storage.html">Pinellas</a><a href="polk-county-storage.html">Polk</a><a href="putnam-county-storage.html">Putnam</a><a href="santa-rosa-county-storage.html">Santa Rosa</a><a href="sarasota-county-storage.html">Sarasota</a><a href="seminole-county-storage.html">Seminole</a><a href="st-johns-county-storage.html">St. Johns</a><a href="st-lucie-county-storage.html">St. Lucie</a><a href="sumter-county-storage.html">Sumter</a><a href="suwannee-county-storage.html">Suwannee</a><a href="taylor-county-storage.html">Taylor</a><a href="union-county-storage.html">Union</a><a href="volusia-county-storage.html">Volusia</a><a href="wakulla-county-storage.html">Wakulla</a><a href="walton-county-storage.html">Walton</a><a href="washington-county-storage.html">Washington</a></div>
 </aside>
   </section>
 
-  <h2>All live pages</h2>
-  <p class="small muted" style="margin-top:-.3rem;margin-bottom:.7rem">The same counties, in alphabetical order, plus the Tampa city page. Use this list if you want to find a page without the map.</p>
-  <ul class="county-list">
+  <details class="all-counties">
+    <summary>All counties</summary>
+    <p class="small muted">Use this list if you want a page without the map or a ZIP search. Every county in Florida is here, plus a Tampa city page.</p>
+    <ul class="county-list">
     <li><a href="alachua-county-storage.html"><span class="name">Alachua</span><span class="blurb">First-month offers $1–$27; rents $47–$130/mo</span></a></li>
     <li><a href="baker-county-storage.html"><span class="name">Baker</span><span class="blurb">MCM in Macclenny, from $124.99/mo</span></a></li>
     <li><a href="bay-county-storage.html"><span class="name">Bay</span><span class="blurb">Panama City Beach; $1 first month offers, from $34.50/mo</span></a></li>
@@ -197,126 +210,11 @@
     <li><a href="washington-county-storage.html"><span class="name">Washington</span><span class="blurb">From $75/mo in Wausau; $80/mo in Chipley</span></a></li>
   </ul>
   <p class="city-pages">City page: <a href="tampa-10x10.html">Tampa 10×10</a> — lowest ad $46/mo; some later rents $92–$151.</p>
+  </details>
 
-<section class="catch" aria-label="Ad price versus later price">
-<div>
-<h2>The catch: the ad price doubles</h2>
-<p>The four cheapest ads we found. Green is months 1 to 4. Orange is what the same unit costs from month 5, according to the company’s own listing.</p>
-<div class="bar"><div>Tampa, N 56th St</div><div class="track"><div class="ad" style="width:21.7%"></div><div class="later" style="left:21.7%;width:21.7%"></div><span style="left:calc(43.4% + 8px)">$46 &rarr; $92</span></div></div>
-<div class="bar"><div>Port St. Lucie, University Blvd</div><div class="track"><div class="ad" style="width:23.6%"></div><div class="later" style="left:23.6%;width:23.1%"></div><span style="left:calc(46.7% + 8px)">$50 &rarr; $99</span></div></div>
-<div class="bar"><div>Tampa, N Dale Mabry</div><div class="track"><div class="ad" style="width:24.1%"></div><div class="later" style="left:24.1%;width:23.6%"></div><span style="left:calc(47.7% + 8px)">$51 &rarr; $101</span></div></div>
-<div class="bar"><div>Homestead, NE 8th St</div><div class="track"><div class="ad" style="width:34.4%"></div><div class="later" style="left:34.4%;width:34.5%"></div><span style="left:calc(68.9% + 8px)">$73 &rarr; $146</span></div></div>
-<p class="small muted">Bars scaled to $212, the highest later rent we found (Doral).</p>
-</div>
-</section>
-
-  <section class="counties" aria-label="County listings">
-  <h2>County listings</h2>
-  <p class="muted">The cheapest listing is first inside each county. Prices are from each company’s own website. Tampa is a city page for Hillsborough County. The full Hillsborough county page is live now.</p>
-<div class="co" id="baker"><h3>Baker</h3><div class="meta">MCM Mini Storage &middot; 2 listings &middot; checked Nov 19, 2026</div>
-<ul class="ls">
-<li><span>185 S Lowder St, Macclenny &middot; non-climate</span><b>$124.99/mo</b><small>$19.99 admin fee and $25 deposit. Plus tax and insurance; autopay required.</small></li>
-<li><span>185 S Lowder St, Macclenny &middot; climate-controlled</span><b>$199.99/mo</b><small>Same setup fees. All Safe Mini Storage lists 10&times;10 units but posts no rent.</small></li>
-</ul><div class="more"><a href="baker-county-storage.html">Full Baker page</a><a href="#map">Back to map</a></div></div>
-
-<div class="co" id="columbia"><h3>Columbia</h3><div class="meta">Tellus Self Storage &middot; 2 listings &middot; checked Nov 19, 2026</div>
-<ul class="ls">
-<li><span>814 SW State Road 247, Lake City &middot; non-climate</span><b>$80/mo</b><small>Online, introductory. $118 in-store. No date given for when it changes.</small></li>
-<li><span>814 SW State Road 247, Lake City &middot; climate-controlled</span><b>$164/mo</b><small>Same price online and in-store.</small></li>
-</ul><div class="more"><a href="columbia-county-storage.html">Full Columbia page</a><a href="#map">Back to map</a></div></div>
-
-<div class="co" id="franklin"><h3>Franklin</h3><div class="meta">Apalachicola Storage &middot; 1 listing &middot; checked Nov 19, 2026</div>
-<ul class="ls">
-<li><span>160 Market Street, Apalachicola &middot; roll-up door</span><b>$82.50/mo</b><small>Starting price, may need a longer agreement. Waitlist shown.</small></li>
-</ul><div class="more"><a href="franklin-county-storage.html">Full Franklin page</a><a href="#map">Back to map</a></div></div>
-
-<div class="co" id="hamilton"><h3>Hamilton</h3><div class="meta">Hometown Mini Storage &middot; checked Nov 19, 2026</div>
-<ul class="ls">
-<li><span>1223 US Highway 129, Jasper &middot; 10&times;12 drive-up</span><b>$95/mo</b><small>No 10&times;10 price posted. This listing is 120 square feet; “Only 1 left” was shown.</small></li>
-</ul><div class="more"><a href="hamilton-county-storage.html">Full Hamilton page</a><a href="#map">Back to map</a></div></div>
-
-<div class="co" id="highlands"><h3>Highlands</h3><div class="meta">AA Storage &middot; 2 listings &middot; checked Nov 19, 2026</div>
-<ul class="ls">
-<li><span>3214 Spinks Road, Sebring &middot; non-climate</span><b>$85/mo</b><small>Cash or check. $88.39 by card.</small></li>
-<li><span>3721 Kenilworth Blvd, Sebring &middot; non-climate</span><b>$85/mo</b><small>Cash or check. $88.39 by card.</small></li>
-</ul><div class="more"><a href="highlands-county-storage.html">Full Highlands page</a><a href="#map">Back to map</a></div></div>
-
-<div class="co" id="hillsborough"><h3>Hillsborough (Tampa)</h3><div class="meta">Public Storage &middot; 5 listings with a later price &middot; checked Nov 18, 2026</div>
-<ul class="ls">
-<li><span>6940 N 56th Street &middot; drive-up</span><b>$46 &rarr; $92</b><small>Months 1&ndash;4, then months 5&ndash;12.</small></li>
-<li><span>8003 N Dale Mabry Hwy &middot; drive-up</span><b>$51 &rarr; $101</b><small>Months 1&ndash;4, then months 5&ndash;12.</small></li>
-<li><span>3413 W Hillsborough Ave &middot; climate-controlled</span><b>$55 &rarr; $110</b><small>$29 admin fee shown.</small></li>
-<li><span>5014 S Dale Mabry Hwy &middot; drive-up</span><b>$67 &rarr; $133</b><small>Months 1&ndash;4, then months 5&ndash;12.</small></li>
-<li><span>1302 W Kennedy Blvd &middot; climate-controlled</span><b>$76 &rarr; $151</b><small>$29 admin fee shown.</small></li>
-</ul><div class="more"><a href="tampa-10x10.html">Full Tampa page (adds CubeSmart)</a><a href="#map">Back to map</a></div></div>
-
-<div class="co" id="madison"><h3>Madison</h3><div class="meta">Madison Mini Storage &middot; checked Nov 19, 2026</div>
-<ul class="ls">
-<li><span>1098 E. US Highway 90, Madison</span><b>Call</b><small>The company website posts no 10&times;10 price.</small></li>
-</ul><div class="more"><a href="madison-county-storage.html">Full Madison page</a><a href="#map">Back to map</a></div></div>
-
-<div class="co" id="miami-dade"><h3>Miami-Dade</h3><div class="meta">Public Storage &middot; 13 listings with a later price &middot; checked Nov 19, 2026</div>
-<ul class="ls">
-<li><span>1977 NE 8th St, Homestead</span><b>$73 &rarr; $146</b><small>Months 1&ndash;4, then months 5&ndash;12.</small></li>
-<li><span>7511 NW 73rd Street, Miami</span><b>$78 &rarr; $155</b><small>Months 1&ndash;4, then months 5&ndash;12.</small></li>
-<li><span>7850 W 4th Ave, Hialeah</span><b>$80 &rarr; $160</b><small>Months 1&ndash;4, then months 5&ndash;12.</small></li>
-<li><span>6550 W 20th Ave, Hialeah</span><b>$83 &rarr; $165</b><small>Months 1&ndash;4, then months 5&ndash;12.</small></li>
-<li><span>12850 SW 128th St, Miami</span><b>$94 &rarr; $187</b><small>Months 1&ndash;4, then months 5&ndash;12.</small></li>
-<li><span>2851 SW 31st Ave, Miami</span><b>$98 &rarr; $196</b><small>Climate-controlled, 24/7 access.</small></li>
-<li><span>14401 SW 119th Ave, Miami</span><b>$98 &rarr; $196</b><small>Months 1&ndash;4, then months 5&ndash;12.</small></li>
-<li><span>9600 NW 40th Street Rd, Doral</span><b>$106 &rarr; $212</b><small>Biggest jump we found: +$106 a month.</small></li>
-<li><span>300 NW 36th St, Miami</span><b>$108 &rarr; $180</b><small>Climate-controlled.</small></li>
-<li><span>10505 Marlin Road, Miami</span><b>$111 &rarr; $185</b><small>Months 1&ndash;4, then months 5&ndash;12.</small></li>
-<li><span>7200 W 20th Ave, Hialeah</span><b>$113 &rarr; $161</b><small>Months 1&ndash;4, then months 5&ndash;12.</small></li>
-<li><span>2990 SW 28th Lane, Miami</span><b>$118 &rarr; $196</b><small>Climate-controlled, 24/7 access.</small></li>
-<li><span>7996 NW South River Drive, Medley</span><b>$121 &rarr; $173</b><small>Months 1&ndash;4, then months 5&ndash;12.</small></li>
-</ul><div class="more"><a href="miami-dade-county-storage.html">Full Miami-Dade page</a><a href="#map">Back to map</a></div></div>
-
-<div class="co" id="monroe"><h3>Monroe</h3><div class="meta">Storage Rentals of America &middot; 1 listing &middot; checked Nov 19, 2026</div>
-<ul class="ls">
-<li><span>113 Overseas Hwy, Key West &middot; climate-controlled, first floor</span><b>$75 &rarr; $107</b><small>30% off for the first 3 months, then $107/mo. First-year math: ($75 &times; 3) + ($107 &times; 9) = $1,188.</small></li>
-</ul><div class="more"><a href="monroe-county-storage.html">Full Monroe page</a><a href="#map">Back to map</a></div></div>
-
-<div class="co" id="okeechobee"><h3>Okeechobee</h3><div class="meta">2 companies &middot; 3 listings &middot; checked Nov 19, 2026</div>
-<ul class="ls">
-<li><span>Parrott Avenue Storage, 1799 S Parrott Ave &middot; drive-up</span><b>$89/mo</b><small>"1st Full Month Free" shown with this unit. Confirm terms.</small></li>
-<li><span>Lake &amp; Trail, 1200 FL-78 &middot; non-climate</span><b>$96.14/mo</b><small>Waitlist shown.</small></li>
-<li><span>Lake &amp; Trail, 1200 FL-78 &middot; climate-controlled</span><b>$151.81/mo</b><small>Or $1,730.63 prepaid for 12 months.</small></li>
-</ul><div class="more"><a href="okeechobee-county-storage.html">Full Okeechobee page</a><a href="#map">Back to map</a></div></div>
-
-<div class="co" id="palm-beach"><h3>Palm Beach</h3><div class="meta">2 companies · 22 listings · 8 communities &middot; checked Nov 20, 2026</div><ul class="ls"><li><span><a href="https://www.publicstorage.com/self-storage-fl-west-palm-beach/5219.html">1301 Mercer Ave</a> &middot; West Palm Beach, FL 33401 · Climate controlled, elevator, indoor roll-up door</span><b>$73 &rarr; $145</b><small>First four months: 50% off. One-time admin fee: $29.</small></li><li><span><a href="https://www.publicstorage.com/self-storage-fl-west-palm-beach/2241.html">1247 45th St</a> &middot; West Palm Beach, FL 33407 · Ground floor, inside, roll-up door, near door or elevator</span><b>$77 &rarr; $153</b><small>First four months: 50% off. One-time admin fee: $29.</small></li><li><span><a href="https://www.publicstorage.com/self-storage-fl-boca-raton/5300.html">1900 NW 1st Ct</a> &middot; Boca Raton, FL 33432 · Climate controlled, elevator, indoor roll-up door, near door or elevator</span><b>$125 &rarr; $250</b><small>First four months: 50% off. One-time admin fee: $29.</small></li><li><span><a href="https://www.publicstorage.com/self-storage-fl-boca-raton/425.html">21000 Boca Rio Rd, Ste A31</a> &middot; Boca Raton, FL 33433 · Climate controlled, elevator, indoor roll-up door</span><b>$89 &rarr; $149</b><small>First four months: 40% off. One-time admin fee: $29.</small></li></ul><div class="more"><a href="palm-beach-county-storage.html">Full Palm Beach page</a><a href="#map">Back to map</a></div></div>
-<div class="co" id="pasco"><h3>Pasco</h3><div class="meta">Public Storage &middot; 3 listings &middot; checked Nov 19, 2026</div>
-<ul class="ls">
-<li><span>7139 Mitchell Blvd, New Port Richey</span><b>$65 &rarr; $108</b><small>Lowest ad. A second 10&times;10 at this address is $68 then $135. $29 admin fee shown.</small></li>
-<li><span>6613 State Road 54, New Port Richey</span><b>$1, then $78/mo</b><small>$1 for month one, then $78 online / $97 in-store. $29 admin fee shown.</small></li>
-</ul><div class="more"><a href="pasco-county-storage.html">Full Pasco page</a><a href="#map">Back to map</a></div></div>
-
-<div class="co" id="pinellas"><h3>Pinellas</h3><div class="meta">2 companies · 4 priced listings &middot; checked Nov 20, 2026</div><ul class="ls"><li><span>2150 25th St North, St. Petersburg &middot; Outside unit</span><b>$1 &rarr; $120</b><small>One-time admin fee: $29. The company shows a monthly online rent but does not say how long that price lasts.</small></li><li><span>2150 25th St North, St. Petersburg &middot; Outdoor unit with drive-up access</span><b>$1 &rarr; $177</b><small>One-time admin fee: $29. The company shows a monthly online rent but does not say how long that price lasts.</small></li><li><span>1660 Gulf to Bay Blvd, Clearwater &middot; Drive-up access</span><b>$75 &rarr; $124</b><small>These are two booking prices. The listing doesn’t say when a renter would switch to the in-store rate.</small></li><li><span>1660 Gulf to Bay Blvd, Clearwater &middot; Indoor, climate controlled, elevator access</span><b>$76 &rarr; $137</b><small>These are two booking prices. The listing doesn’t say when a renter would switch to the in-store rate.</small></li></ul><div class="more"><a href="pinellas-county-storage.html">Full Pinellas page</a><a href="#map">Back to map</a></div></div>
-<div class="co" id="st-lucie"><h3>St. Lucie</h3><div class="meta">2 companies &middot; 3 listings &middot; checked Nov 19, 2026</div>
-<ul class="ls">
-<li><span>Public Storage, 530 NW University Blvd, Port St. Lucie</span><b>$50 &rarr; $99</b><small>Months 1&ndash;4, then months 5&ndash;12. $29 admin fee.</small></li>
-<li><span>Extra Space, 8885 S US Highway 1, Port St. Lucie</span><b>$90/mo</b><small>Online rate. $137 in-store.</small></li>
-<li><span>Extra Space, 8885 S US Highway 1, first floor</span><b>$93/mo</b><small>Online rate. $163 in-store.</small></li>
-</ul><div class="more"><a href="st-lucie-county-storage.html">Full St. Lucie page</a><a href="#map">Back to map</a></div></div>
-
-<div class="co" id="suwannee"><h3>Suwannee</h3><div class="meta">MiMi and PaPa's Self Storage &middot; 1 listing &middot; checked Nov 19, 2026</div>
-<ul class="ls">
-<li><span>7434 County Road 795, Live Oak &middot; drive-up</span><b>$87.99/mo</b><small>Live inventory changes. Confirm the price.</small></li>
-</ul><div class="more"><a href="suwannee-county-storage.html">Full Suwannee page</a><a href="#map">Back to map</a></div></div>
-
-<div class="co" id="union"><h3>Union</h3><div class="meta">Lake Butler Mini Storage &middot; checked Nov 19, 2026</div>
-<ul class="ls">
-<li><span>1015 SW 3rd St., Lake Butler</span><b>Call</b><small>No 10&times;10 price posted online.</small></li>
-</ul><div class="more"><a href="union-county-storage.html">Full Union page</a><a href="#map">Back to map</a></div></div>
-
-<div class="co" id="washington"><h3>Washington</h3><div class="meta">Brickyard Road Storage &middot; 2 listings &middot; checked Nov 19, 2026</div>
-<ul class="ls">
-<li><span>4269 Highway 77, Chipley (Wausau/Sunny Hills area) &middot; standard-height 10&times;10</span><b>$75/mo</b><small>No one-time fee amount shown on the pricing page.</small></li>
-<li><span>1411 Brickyard Rd, Chipley &middot; standard-height 10&times;10</span><b>$80/mo</b><small>No one-time fee amount shown on the pricing page.</small></li>
-</ul><div class="more"><a href="washington-county-storage.html">Full Washington page</a><a href="#map">Back to map</a></div></div>
-  </section>
-
-  <p class="small muted">We don’t list anything until we can confirm it on the company’s own website. <a href="about.html">How we check prices</a>.</p>
+  <div class="note">
+    <p style="margin:0"><strong>Booking links are not active yet.</strong> If we add them later, they will be clearly marked and won’t change any price we show. <a href="about.html">Read how we check prices</a>.</p>
+  </div>
 
 </div>
 </main>
@@ -346,5 +244,6 @@
     <p class="small muted" style="margin-top:1.5rem">© 2026 Street Rate FL. Not affiliated with the companies listed.</p>
   </div>
 </footer>
+<script src="js/zip-search.js" defer></script>
 </body>
 </html>

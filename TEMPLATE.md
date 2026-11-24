@@ -37,7 +37,16 @@ Keep numbers, addresses, dates, source links, meta tags, canonicals, and `data-c
 
 The top nav on every page is Storage prices (`counties.html`), Wind insurance (`wind/`), About, and Contact. Do not put a city or county name in the header nav. The brand mark still links to the home page. Mark Storage prices as the current item on `counties.html`, `tampa-10x10.html`, and every county page. Mark Wind insurance as the current item on every `/wind/` page. Mark About or Contact when that page is open. Leave no item current on the home page.
 
-“How we check” is not in the header nav. Keep it reachable in the footer as “How we check prices,” which links to `about.html`. Tampa and each county stay linked from the home page and from `counties.html`.
+“How we check” is not in the header nav. Keep it reachable in the footer as “How we check prices,” which links to `about.html`. The home page leads with a short hero, a ZIP search, and the clickable Florida map. It does not list every county or a cheapest-units-by-name list. `counties.html` also leads with ZIP search and the map. Keep the full county list there only as a collapsed “All counties” fallback (for accessibility and internal links), including the Tampa city page. Do not invent ZIP-to-county assignments; the client-side lookup in `data/fl-zips.json` is built from the official Census ZCTA-to-county file cited in `js/zip-search.js`.
 
 The footer Pages list should include a Wind link to `wind/`. The site-wide footer disclosure is: “If you use a partner link we tell you about, we may earn a fee. We never take money to change prices or rankings. No partner links are active yet. Figures can change. Confirm with the company or your insurer before you pay.”
 
+
+
+## Home page and storage entry
+
+The home page hero should stay short: one headline and a one- or two-line explanation that storage ads only show the first month, and this site shows what you’ll actually pay after that, from each company’s own website. A simple self-made illustration is fine. Do not use photographs of real facilities or any storage-brand imagery. If the hero shows the $46 / $92 Tampa example, keep that date and those figures as already sourced; do not invent new ones.
+
+Storage entry is ZIP search plus the existing Florida county map, on both the home page and `counties.html`. The lookup is pure client-side JavaScript (`js/zip-search.js` plus `data/fl-zips.json`). A Florida ZIP goes to `{slug}-county-storage.html` for the county with the largest share of that ZCTA. If the ZIP also covers another county at a meaningful share, say so. Non-Florida or unknown ZIPs get a friendly message; do not call an external API.
+
+Keep the Storage / Wind choice clear: storage is the ZIP search and map; wind stays in the header nav and in a distinct home-page banner that links to `wind/`.
