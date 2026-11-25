@@ -42,67 +42,30 @@
 <main id="main">
 <div class="wrap">
 
-  <section class="hero hero-home">
-    <div class="hero-copy">
-      <p class="eyebrow">Florida storage prices</p>
-      <h1>See what you’ll pay after the first month.</h1>
-      <p class="lede">Storage ads only show the first month. We show the later price from each company’s own website.</p>
-      <p class="small muted">The $46 and $92 in the picture are a real Tampa 10×10, checked November 18, 2026.</p>
-    </div>
-    <figure class="hero-art">
-      <svg class="hero-svg" viewBox="0 0 420 280" role="img" aria-labelledby="hero-art-title">
-        <title id="hero-art-title">A simple drawing of storage-unit doors next to an ad price of $46 and a month-five price of $92</title>
-        <rect x="0" y="0" width="420" height="280" rx="28" fill="var(--surface)"/>
-        <ellipse cx="210" cy="248" rx="150" ry="16" fill="var(--line)"/>
-        <!-- left unit -->
-        <g transform="translate(36 70)">
-          <rect x="0" y="0" width="86" height="150" rx="8" fill="var(--surface-2)" stroke="var(--line-2)" stroke-width="2"/>
-          <rect x="10" y="12" width="66" height="126" rx="4" fill="var(--bg)" stroke="var(--line-2)" stroke-width="1.5"/>
-          <path d="M16 36h54M16 52h54M16 68h54M16 84h54M16 100h54" stroke="var(--line-2)" stroke-width="1.5" fill="none"/>
-        </g>
-        <!-- center unit, slightly forward -->
-        <g transform="translate(142 48)">
-          <rect x="0" y="0" width="110" height="186" rx="10" fill="var(--surface)" stroke="var(--ink)" stroke-opacity=".18" stroke-width="2"/>
-          <rect x="12" y="14" width="86" height="158" rx="5" fill="var(--bg)" stroke="var(--ink)" stroke-opacity=".16" stroke-width="1.75"/>
-          <path d="M20 44h70M20 64h70M20 84h70M20 104h70M20 124h70M20 144h70" stroke="var(--ink)" stroke-opacity=".12" stroke-width="1.75" fill="none"/>
-          <circle cx="55" cy="28" r="4" fill="var(--ink)" fill-opacity=".25"/>
-        </g>
-        <!-- right unit -->
-        <g transform="translate(278 70)">
-          <rect x="0" y="0" width="86" height="150" rx="8" fill="var(--surface-2)" stroke="var(--line-2)" stroke-width="2"/>
-          <rect x="10" y="12" width="66" height="126" rx="4" fill="var(--bg)" stroke="var(--line-2)" stroke-width="1.5"/>
-          <path d="M16 36h54M16 52h54M16 68h54M16 84h54M16 100h54" stroke="var(--line-2)" stroke-width="1.5" fill="none"/>
-        </g>
-        <!-- price cards -->
-        <g transform="translate(24 22)">
-          <rect x="0" y="0" width="112" height="58" rx="12" fill="var(--promo)"/>
-          <text x="14" y="20" fill="#fff" font-family="ui-rounded, SF Pro Rounded, Segoe UI, sans-serif" font-size="11" font-weight="700" letter-spacing=".08em">AD</text>
-          <text x="14" y="46" fill="#fff" font-family="ui-rounded, SF Pro Rounded, Segoe UI, sans-serif" font-size="26" font-weight="700">$46</text>
-        </g>
-        <g transform="translate(284 22)">
-          <rect x="0" y="0" width="112" height="58" rx="12" fill="var(--later)"/>
-          <text x="12" y="20" fill="#fff" font-family="ui-rounded, SF Pro Rounded, Segoe UI, sans-serif" font-size="11" font-weight="700" letter-spacing=".06em">MONTH 5</text>
-          <text x="12" y="46" fill="#fff" font-family="ui-rounded, SF Pro Rounded, Segoe UI, sans-serif" font-size="26" font-weight="700">$92</text>
-        </g>
-      </svg>
-    </figure>
+    <section class="hero hero-home">
+    <p class="eyebrow">Florida storage prices</p>
+    <h1>See what you’ll pay after the first month.</h1>
+    <p class="lede">Storage ads show the first month. We show you the real price after that.</p>
   </section>
 
   <section class="find" aria-label="Find storage prices">
+    <figure class="find-photo">
+      <img src="img/moving-day.svg" width="1200" height="675" alt="A couple smiling as they carry moving boxes into a storage unit" loading="eager" decoding="async">
+    </figure>
     <h2>Find storage prices</h2>
     <div class="zip-search" data-zip-search>
       <form action="counties.html" method="get" role="search">
         <label for="zip">Search by ZIP code</label>
         <div class="zip-row">
-          <input id="zip" class="zip-input" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="Florida ZIP, like 33186" enterkeyhint="search" aria-describedby="zip-help">
+          <input id="zip" class="zip-input" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="Enter your ZIP code" enterkeyhint="search">
           <button type="submit">See prices</button>
         </div>
       </form>
-      <p id="zip-help" class="small muted" style="margin:.55rem 0 0">We’ll open that county’s price page. ZIPs that cross a county line go to the county with the largest share.</p>
       <div class="zip-msg" role="status" aria-live="polite"></div>
     </div>
+  </section>
 
-<section class="map-grid" id="map" aria-label="Florida county map">
+  <section class="map-grid" id="map" aria-label="Florida county map">
 <svg class="fl" viewBox="0 0 840 672" role="img" aria-label="Map of Florida’s 67 counties as tiles. Colored tiles have storage prices; tap one to see its listings.">
 <text x="150" y="330" class="sea">Gulf of Mexico</text>
 <text x="830" y="40" text-anchor="end" class="sea sm">Georgia</text>

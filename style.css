@@ -310,18 +310,24 @@ a.ct:hover rect, a.ct:focus rect { stroke: var(--later); stroke-width: 4; stroke
 
 /* ---------- home hero, ZIP search, wind banner ---------- */
 .hero-home {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(15rem, .85fr);
-  gap: 1.75rem 2.2rem;
-  align-items: center;
-  padding-block: 1.35rem 1.1rem;
+  padding-block: 1.35rem .85rem;
 }
 .hero-home h1 { max-width: 16ch; }
-.hero-home .lede { margin-bottom: .6rem; }
-.hero-art { margin: 0; }
-.hero-svg { width: 100%; height: auto; display: block; max-width: 26rem; margin-inline: auto; }
-.find { margin: .4rem 0 2rem; }
+.hero-home .lede { margin-bottom: 0; max-width: 32rem; }
+.find { margin: .2rem 0 2rem; }
 .find h2 { margin: 0 0 .8rem; }
+.find-photo {
+  margin: 0 0 1.15rem;
+  max-width: 720px;
+}
+.find-photo picture,
+.find-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
 .zip-search {
   background: var(--surface);
   border: 1px solid var(--line);
@@ -401,9 +407,9 @@ a.ct:hover rect, a.ct:focus rect { stroke: var(--later); stroke-width: 4; stroke
 .all-counties[open] > summary::before { content: "▾ "; }
 .all-counties .county-list { margin-top: .2rem; }
 @media (max-width: 700px) {
-  .hero-home { grid-template-columns: 1fr; gap: 1rem; padding-block: 1rem .4rem; }
-  .hero-art { order: -1; max-width: 20rem; margin-inline: auto; }
+  .hero-home { padding-block: 1rem .35rem; }
   .hero-home h1 { max-width: none; }
+  .find-photo { margin-bottom: 1rem; }
   .zip-row { flex-wrap: wrap; }
   .zip-row input { flex: 1 1 100%; }
   .zip-row button[type="submit"] { width: 100%; }

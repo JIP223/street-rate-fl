@@ -42,11 +42,10 @@
     <form action="counties.html" method="get" role="search">
       <label for="zip">Search by ZIP code</label>
       <div class="zip-row">
-        <input id="zip" class="zip-input" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="Florida ZIP, like 33186" enterkeyhint="search" aria-describedby="zip-help">
+        <input id="zip" class="zip-input" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="Enter your ZIP code" enterkeyhint="search">
         <button type="submit">See prices</button>
       </div>
     </form>
-    <p id="zip-help" class="small muted" style="margin:.55rem 0 0">We’ll open that county’s price page. ZIPs that cross a county line go to the county with the largest share.</p>
     <div class="zip-msg" role="status" aria-live="polite"></div>
   </div>
 

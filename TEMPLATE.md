@@ -45,7 +45,7 @@ The footer Pages list should include a Wind link to `wind/`. The site-wide foote
 
 ## Home page and storage entry
 
-The home page hero should stay short: one headline and a one- or two-line explanation that storage ads only show the first month, and this site shows what you’ll actually pay after that, from each company’s own website. A simple self-made illustration is fine. Do not use photographs of real facilities or any storage-brand imagery. If the hero shows the $46 / $92 Tampa example, keep that date and those figures as already sourced; do not invent new ones.
+The home page hero should stay short: the headline “See what you’ll pay after the first month.” and exactly one short supporting line. Do not add a caption under the hero or an extra explainer under the ZIP box. A medium photo of people moving boxes into a generic storage unit may sit above the “Find storage prices” heading (`img/moving-day.svg`, an optimized 1200px photo). Do not use photos of real branded facilities, and do not invent prices.
 
 Storage entry is ZIP search plus the existing Florida county map, on both the home page and `counties.html`. The lookup is pure client-side JavaScript (`js/zip-search.js` plus `data/fl-zips.json`). A Florida ZIP goes to `{slug}-county-storage.html` for the county with the largest share of that ZCTA. If the ZIP also covers another county at a meaningful share, say so. Non-Florida or unknown ZIPs get a friendly message; do not call an external API.
 
